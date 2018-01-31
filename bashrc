@@ -32,20 +32,20 @@ export PS1="$cyan\u$green\$(__git_ps1)$yellow \W $ $reset"
 # Enable tab completion
 source ~/git-completion.bash
 
-# Allow opening of Sublime Text from Git Bash by just typing "subl"
-alias st3="C:/Program\ Files/Sublime\ Text\ 3/sublime_text.exe"
+# Aliases that differ by operating system
+if [ "$(uname)" == "Darwin" ]; then # macOS
+    # Allow opening of Sublime Text from terminal by just typing "st3"
+	alias st3="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
-# Allow opening of Python interpreter from Git Bash by just typing "python"
-alias python="winpty python.exe"
+elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then # Windows
+	# Allow opening of Sublime Text from Git Bash by just typing "st3"
+	alias st3="C:/Program\ Files/Sublime\ Text\ 3/sublime_text.exe"
 
-# Allow opening of Chrome from Git Bash by just typing "chrome"
-alias chrome="C:/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe"
+	# Allow opening of Python interpreter from Git Bash by just typing "python"
+	alias python="winpty python.exe"
 
-# Alias for version-control folder for Git and GitHub course
-alias vc="cd 'C:/Users/mifryar/Dropbox (Personal)/Udacity/Git and GitHub/version-control'"
+fi
 
-# Alias for intro-to-python folder for Udacity course
-alias introtopython="cd 'C:/Users/mifryar/Dropbox (Personal)/Udacity/intro-to-python'"
 
 # Alias for intro-to-python folder for Udacity course
 alias introtoda="cd 'C:/Users/mifryar/Dropbox (Personal)/Udacity/intro-to-data-analysis'"
