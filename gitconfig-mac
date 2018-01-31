@@ -1,0 +1,8 @@
+# =========================================================================== #
+# Description: git configuration for macOS
+# Author: Michael Fryar
+# Hat tips:
+#   How to Use Git and GitHub - Udacity (ud775)
+
+[core]
+    editor = '/Applications/Sublime Text 3.app/Contents/SharedSupport/bin/subl'

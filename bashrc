@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+# =========================================================================== #
+# Description: BASH configurations and aliases
+# Author: Michael Fryar
+# Note: Linux and Unix run .bashrc for non-login shells. For login shells,
+#       (i.e. shells that require you to type your user name and password), a
+#       different file, .bash_profile, is run. This means that .bash_profile is
+#       run only once when you login and .bashrc is run for every new
+#       interactive shell.
+#       macOS, in contrast, runs a login shell by default for each new
+#       terminal window. This means that it is not necessary to have a .bashrc
+#       in addition to your .bash_profile if working exclusively in macOS.
+
+# Define colors
+red="\[033[0;31m\]"
+green="\[\033[0;32m\]"
+yellow="\[\033[0;33m\]"
+blue="\[\033[0;34m\]"
+purple="\[\033[0;35m\]"
+cyan="\[\033[0;36m\]"
+white="\[\033[0;37m\]"
+reset="\[\033[0m\]"
+
+# Change command prompt
+source ~/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+# '\u' adds the name of the current user to the prompt
+# '\$(__git_ps1)' adds git-related stuff
+# '\W' adds the name of the current directory
+export PS1="$cyan\u$green\$(__git_ps1)$yellow \W $ $reset"
+
+# Enable tab completion
+source ~/git-completion.bash
+
+# Allow opening of Sublime Text from Git Bash by just typing "subl"
+alias st3="C:/Program\ Files/Sublime\ Text\ 3/sublime_text.exe"
+
+# Allow opening of Python interpreter from Git Bash by just typing "python"
+alias python="winpty python.exe"
+
+# Allow opening of Chrome from Git Bash by just typing "chrome"
+alias chrome="C:/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe"
+
+# Alias for version-control folder for Git and GitHub course
+alias vc="cd 'C:/Users/mifryar/Dropbox (Personal)/Udacity/Git and GitHub/version-control'"
+
+# Alias for intro-to-python folder for Udacity course
+alias introtopython="cd 'C:/Users/mifryar/Dropbox (Personal)/Udacity/intro-to-python'"
+
+# Alias for intro-to-python folder for Udacity course
+alias introtoda="cd 'C:/Users/mifryar/Dropbox (Personal)/Udacity/intro-to-data-analysis'"
+
+# Alias for epodx data dashboard repo
+alias dashboards="cd 'C:/Users/mifryar/Documents/epodx-dashboards'"
+
+# Alias for epodx repo
+alias epodx="cd 'C:/Users/mifryar/Documents/epodx'"
+
+# Alias for visualizing git history (h/t Angela Ambroz)
+alias glg='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
+
+# Allow navigating back multiple directory levels
+alias ..='cd ../'                           # Go back 1 directory level
+alias ...='cd ../../'                       # Go back 2 directory levels
+alias .3='cd ../../../'                     # Go back 3 directory levels
+alias .4='cd ../../../../'                  # Go back 4 directory levels
+alias .5='cd ../../../../../'               # Go back 5 directory levels
+alias .6='cd ../../../../../../'            # Go back 6 directory levels

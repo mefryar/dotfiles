@@ -1,0 +1,16 @@
+# =========================================================================== #
+# Description: git configurations
+# Author: Michael Fryar
+# Hat tip: How to Use Git and GitHub - Udacity (ud775)
+
+[includeIf "gitdir:/Users/mifryar/"]
+    path = .gitconfig-mac
+[includeIf "gitdir:C:/Users/mifryar/"]
+    path = .gitconfig-windows
+[push]
+    default = upstream
+[merge]
+    conflictstyle = diff3
+[user]
+    name = mefryar
+    email = mfryar.hks@gmail.com
