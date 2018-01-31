@@ -1,8 +1,0 @@
-# =========================================================================== #
-# Description: git configuration for Windows
-# Author: Michael Fryar
-# Hat tips:
-#   How to Use Git and GitHub - Udacity (ud775)
-
-[core]
-    editor = 'C:/Program Files/Sublime Text 3/sublime_text.exe' -n -w

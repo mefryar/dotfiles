@@ -8,7 +8,7 @@
 ## Dotfiles directory
 dir=~/dotfiles
 ## Files to symlink in homedir
-files="bash_profile bashrc gitconfig gitconfig-mac gitconfig-windows"
+files="bash_profile bashrc gitconfig"
 
 # Create symlinks from the homedir to files in the ~/dotfiles directory
 for file in $files; do
