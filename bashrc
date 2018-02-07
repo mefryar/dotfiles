@@ -22,7 +22,7 @@ white="\[\033[0;37m\]"
 reset="\[\033[0m\]"
 
 # Change command prompt
-source ~/git-prompt.sh
+source ~/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 # '\u' adds the name of the current user to the prompt
 # '\$(__git_ps1)' adds git-related stuff
@@ -30,7 +30,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1="$cyan\u$green\$(__git_ps1)$yellow \W $ $reset"
 
 # Enable tab completion
-source ~/git-completion.bash
+source ~/.git-completion.bash
 
 # Aliases that differ by operating system
 if [ "$(uname)" == "Darwin" ]; then # macOS
