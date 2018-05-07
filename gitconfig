@@ -20,3 +20,5 @@
 [user]
     name = mefryar
     email = mfryar.hks@gmail.com
+[credential]
+	helper = osxkeychain
