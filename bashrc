@@ -29,6 +29,9 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 # '\W' adds the name of the current directory
 export PS1="$cyan\u$green\$(__git_ps1)$yellow \W $ $reset"
 
+# Add Anaconda to PATH
+export PATH="/Users/mifryar/anaconda3/bin:$PATH"
+
 # Enable tab completion
 source ~/.git-completion.bash
 
@@ -46,15 +49,14 @@ elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then # Windows
 
 fi
 
-
-# Alias for intro-to-python folder for Udacity course
-alias introtoda="cd 'C:/Users/mifryar/Dropbox (Personal)/Udacity/intro-to-data-analysis'"
-
 # Alias for epodx data dashboard repo
-alias dashboards="cd 'C:/Users/mifryar/Documents/epodx-dashboards'"
+alias dashboards="cd ~/EPoD/epodx-dashboards"
 
 # Alias for epodx repo
-alias epodx="cd 'C:/Users/mifryar/Documents/epodx'"
+alias epodx="cd ~/EPoD/epodx"
+
+# Alias for sublime-text-settings repo
+alias st3-settings="cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
 
 # Alias for visualizing git history (h/t Angela Ambroz)
 alias glg='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
