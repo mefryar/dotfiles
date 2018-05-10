@@ -1,0 +1,8 @@
+# Global: Ignore these in all repositories
+
+# Mac
+.DS_Store
+
+# Logs
+logs/
+*.log

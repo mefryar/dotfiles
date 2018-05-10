@@ -12,6 +12,7 @@
 
 [core]
     editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
+	excludesfile = /Users/mifryar/.gitignore
 # 	editor = 'C:/Program Files/Sublime Text 3/sublime_text.exe' -n -w
 [push]
     default = upstream
