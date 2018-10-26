@@ -4,15 +4,15 @@
 # Hat tip: How to Use Git and GitHub - Udacity (ud775)
 # Note: I tried to figure out a way to conditionally include one file to
 # specify my editor path if I'm on macOS and another file to specify my
-# editor path if I'm on Windows. Specifically, I tried 
-# [includeIf "gitdir:C:/Users/mifryar/"] for Windows. For macOs, I tried
-# [includeIf "gitdir:/Users/mifryar/"] and [includeIf "gitdir:~/"].
+# editor path if I'm on Windows. Specifically, I tried
+# [includeIf "gitdir:C:/Users/mefryar/"] for Windows. For macOs, I tried
+# [includeIf "gitdir:/Users/mefryar/"] and [includeIf "gitdir:~/"].
 # Since I couldn't get this to work, I'm going with the simpler solution
-# of commenting out. 
+# of commenting out.
 
 [core]
     editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
-	excludesfile = /Users/mifryar/.gitignore
+	excludesfile = /Users/mefryar/.gitignore
 # 	editor = 'C:/Program Files/Sublime Text 3/sublime_text.exe' -n -w
 [push]
     default = upstream
