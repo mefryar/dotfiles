@@ -1,3 +1,16 @@
 # dotfiles
-Contains my custom dotfiles for configuring bash and git. Includes script to
-create symbolic links from home directory to `~/dotfiles/`.
+Contains custom dotfiles. Right now these are just for configuring bash and
+git. This repo is cloned to the home directory so the path is `~/dotfiles/`.
+The script `makesymlinks.sh` creates symbolic links from the home directory to
+`~/dotfiles/`.
+
+## Installation
+
+``` bash
+git clone https://github.com/mefryar/dotfiles.git
+cd ~/dotfiles
+./makesymlinks.sh
+```
+
+## Acknowledgments
+This repo was inspired by (and draws heavily from) https://github.com/michaeljsmalley/dotfiles
