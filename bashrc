@@ -32,25 +32,8 @@ export PS1="$cyan\u$green\$(__git_ps1)$yellow \W $ $reset"
 # Enable tab completion
 source ~/.git-completion.bash
 
-# Aliases that differ by operating system
-if [ "$(uname)" == "Darwin" ]; then # macOS
-    # Allow opening of Sublime Text from terminal by just typing "st3"
-	alias st3="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-
-elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then # Windows
-	# Allow opening of Sublime Text from Git Bash by just typing "st3"
-	alias st3="C:/Program\ Files/Sublime\ Text\ 3/sublime_text.exe"
-
-	# Allow opening of Python interpreter from Git Bash by just typing "python"
-	alias python="winpty python.exe"
-
-fi
-
-# Alias for epodx data dashboard repo
-alias dashboards="cd ~/EPoD/epodx-dashboards"
-
-# Alias for epodx repo
-alias epodx="cd ~/EPoD/epodx"
+# Alias for Sublime Text 3
+alias st3="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 # Alias for sublime-text-settings repo
 alias st3-settings="cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
@@ -66,7 +49,7 @@ alias .4='cd ../../../../'                  # Go back 4 directory levels
 alias .5='cd ../../../../../'               # Go back 5 directory levels
 alias .6='cd ../../../../../../'            # Go back 6 directory levels
 
-# automatically initialize pyenv
+# Automatically initialize pyenv
 export PATH="/Users/username/.pyenv:$PATH"
 eval "$(pyenv init -)"
 
