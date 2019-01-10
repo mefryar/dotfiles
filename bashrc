@@ -53,3 +53,5 @@ alias .6='cd ../../../../../../'            # Go back 6 directory levels
 export PATH="/Users/username/.pyenv:$PATH"
 eval "$(pyenv init -)"
 
+# Add Pensieve and Mercury credentials from untracked file
+source ~/.pensieve_mercury_credentials.txt

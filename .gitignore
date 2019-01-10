@@ -1,0 +1,4 @@
+# Specify intentionally untracked files to ignore
+
+# Pensieve and Mercury secrets
+pensieve_mercury_credentials.txt
