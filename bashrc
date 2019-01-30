@@ -33,7 +33,7 @@ export PS1="$cyan\u$green\$(__git_ps1)$yellow \W $ $reset"
 source ~/.git-completion.bash
 
 # Alias for Sublime Text 3
-alias st3="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 # Alias for sublime-text-settings repo
 alias st3-settings="cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
@@ -42,12 +42,12 @@ alias st3-settings="cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
 alias glg='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
 
 # Allow navigating back multiple directory levels
-alias ..='cd ../'                           # Go back 1 directory level
-alias ...='cd ../../'                       # Go back 2 directory levels
-alias .3='cd ../../../'                     # Go back 3 directory levels
-alias .4='cd ../../../../'                  # Go back 4 directory levels
-alias .5='cd ../../../../../'               # Go back 5 directory levels
-alias .6='cd ../../../../../../'            # Go back 6 directory levels
+alias ..='cd ../'                            # Go back 1 directory level
+alias ..2='cd ../../'                        # Go back 2 directory levels
+alias ..3='cd ../../../'                     # Go back 3 directory levels
+alias ..4='cd ../../../../'                  # Go back 4 directory levels
+alias ..5='cd ../../../../../'               # Go back 5 directory levels
+alias ..6='cd ../../../../../../'            # Go back 6 directory levels
 
 # Automatically initialize pyenv
 export PATH="/Users/username/.pyenv:$PATH"
