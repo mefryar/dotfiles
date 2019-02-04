@@ -2,29 +2,20 @@
 # Description: git configurations
 # Author: Michael Fryar
 # Hat tip: How to Use Git and GitHub - Udacity (ud775)
-# Note: I tried to figure out a way to conditionally include one file to
-# specify my editor path if I'm on macOS and another file to specify my
-# editor path if I'm on Windows. Specifically, I tried
-# [includeIf "gitdir:C:/Users/mefryar/"] for Windows. For macOs, I tried
-# [includeIf "gitdir:/Users/mefryar/"] and [includeIf "gitdir:~/"].
-# Since I couldn't get this to work, I'm going with the simpler solution
-# of commenting out.
 
 [core]
+    # Set default editor to Sublime Text
     editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
-	excludesfile = /Users/mefryar/.gitignore
-# 	editor = 'C:/Program Files/Sublime Text 3/sublime_text.exe' -n -w
+    # Global Git Ignore
+    excludesfile = /Users/mefryar/.gitignore
 [push]
     default = upstream
 [merge]
+    # Display common ancestor when resolving merge conflicts
     conflictstyle = diff3
 [user]
-	name = mefryar
-	email = michaelefryar@gmail.com
+    name = mefryar
+    email = michaelefryar@gmail.com
 [credential]
-	helper = osxkeychain
-[filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
+    # Save username, password, and personal access tokens
+    helper = osxkeychain
