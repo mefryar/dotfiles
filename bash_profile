@@ -21,16 +21,19 @@ cyan="\[\033[0;36m\]"
 white="\[\033[0;37m\]"
 reset="\[\033[0m\]"
 
-# Change command prompt
-source ~/.git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=1
-# '\u' adds the name of the current user to the prompt
-# '\$(__git_ps1)' adds git-related stuff
-# '\W' adds the name of the current directory
-export PS1="$cyan\u$green\$(__git_ps1)$yellow \W $ $reset"
-
-# Enable tab completion
+# Enable bash completion support for Git
 source ~/.git-completion.bash
+
+# Customize PS1 (Prompt String 1) to show Git status
+source ~/.git-prompt.sh
+# '\u' adds the name of the current user to the prompt
+# '\$(__git_ps1)' adds current branch name
+# '\W' adds the name of the current directory
+export PS1="$cyan\u$yellow \W$green\$(__git_ps1) $ $reset"
+# Show unstaged (*) and staged (+) changes next to the branch name
+export GIT_PS1_SHOWDIRTYSTATE=1
+# Show stashed ($) changes next to branch name
+export GIT_PS1_SHOWSTASHSTATE=1
 
 # Alias for Sublime Text 3
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
