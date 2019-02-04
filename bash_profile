@@ -11,7 +11,54 @@
 #       terminal window. This means that it is not necessary to have a .bashrc
 #       in addition to your .bash_profile if working exclusively in macOS.
 
-# Read .bashrc at startup
-if [ -f ~/.bashrc ]; then
-    source ~/.bashrc
+# Define colors
+red="\[033[0;31m\]"
+green="\[\033[0;32m\]"
+yellow="\[\033[0;33m\]"
+blue="\[\033[0;34m\]"
+purple="\[\033[0;35m\]"
+cyan="\[\033[0;36m\]"
+white="\[\033[0;37m\]"
+reset="\[\033[0m\]"
+
+# Change command prompt
+source ~/.git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+# '\u' adds the name of the current user to the prompt
+# '\$(__git_ps1)' adds git-related stuff
+# '\W' adds the name of the current directory
+export PS1="$cyan\u$green\$(__git_ps1)$yellow \W $ $reset"
+
+# Enable tab completion
+source ~/.git-completion.bash
+
+# Alias for Sublime Text 3
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
+# Alias for sublime-text-settings repo
+alias st3-settings="cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
+
+# Alias for visualizing git history (h/t Angela Ambroz)
+alias glg='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
+
+# Allow navigating back multiple directory levels
+alias ..='cd ../'                            # Go back 1 directory level
+alias ..2='cd ../../'                        # Go back 2 directory levels
+alias ..3='cd ../../../'                     # Go back 3 directory levels
+alias ..4='cd ../../../../'                  # Go back 4 directory levels
+alias ..5='cd ../../../../../'               # Go back 5 directory levels
+alias ..6='cd ../../../../../../'            # Go back 6 directory levels
+
+# If on Juntos laptop
+if [ `whoami` = "michael" ]
+then
+  # Automatically initialize pyenv
+  eval "$(pyenv init -)"
+  # Add Pensieve and Mercury credentials from untracked file
+  source ~/.pensieve_mercury_credentials.txt
+# If on personal laptop
+elif [ `whoami` = "mefryar" ]
+then
+  # Specify path to Anaconda
+  export PATH="/Users/mefryar/anaconda3/bin:$PATH"
 fi
