@@ -21,6 +21,11 @@ cyan="\[\033[0;36m\]"
 white="\[\033[0;37m\]"
 reset="\[\033[0m\]"
 
+# Enable vi-mode editing and set key bindings to default
+set -o vi
+# Insert string at the start of the line to indicate Vi mode (ins or cmd)
+bind "set show-mode-in-prompt on"
+
 # Enable bash completion support for Git
 source ~/.git-completion.bash
 
@@ -29,7 +34,7 @@ source ~/.git-prompt.sh
 # '\u' adds the name of the current user to the prompt
 # '\$(__git_ps1)' adds current branch name
 # '\W' adds the name of the current directory
-export PS1="$cyan\u$yellow \W$green\$(__git_ps1) $ $reset"
+export PS1=" $cyan\u$yellow \W$green\$(__git_ps1) $ $reset"
 # Show unstaged (*) and staged (+) changes next to the branch name
 export GIT_PS1_SHOWDIRTYSTATE=1
 # Show stashed ($) changes next to branch name
