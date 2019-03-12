@@ -57,6 +57,11 @@ alias ..4='cd ../../../../'                  # Go back 4 directory levels
 alias ..5='cd ../../../../../'               # Go back 5 directory levels
 alias ..6='cd ../../../../../../'            # Go back 6 directory levels
 
+# Aliases for di_pipeline repo
+alias dip="cd ~/Juntos/di_pipeline"
+alias styletest="pipenv run python -m pycodestyle"
+alias pytest="pipenv run python -W ignore -m pytest"
+
 # If on Juntos laptop
 if [ `whoami` = "michael" ]
 then
