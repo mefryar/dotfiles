@@ -40,6 +40,9 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 # Show stashed ($) changes next to branch name
 export GIT_PS1_SHOWSTASHSTATE=1
 
+# Do not show duplicates (&) or the following commands in history
+export HISTIGNORE="&:exit:history*:ls*:"
+
 # Alias for Sublime Text 3
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
