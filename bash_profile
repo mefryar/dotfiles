@@ -43,6 +43,9 @@ export GIT_PS1_SHOWSTASHSTATE=1
 # Do not show duplicates (&) or the following commands in history
 export HISTIGNORE="&:exit:history*:ls*:"
 
+# Add timestamp to history
+export HISTTIMEFORMAT="%Y-%m-%d %T "
+
 # Alias for Sublime Text 3
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
