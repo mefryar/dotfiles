@@ -63,8 +63,12 @@ alias ..4='cd ../../../../'                  # Go back 4 directory levels
 alias ..5='cd ../../../../../'               # Go back 5 directory levels
 alias ..6='cd ../../../../../../'            # Go back 6 directory levels
 
-# Aliases for di_pipeline repo
+# Aliases for Juntos directories
+alias dap="cd ~/Juntos/da_pipeline"
 alias dip="cd ~/Juntos/di_pipeline"
+alias sandbox="cd ~/Box\ Sync/jupyter_sandbox"
+
+# Aliases for DI Pipeline tests
 alias styletest="pipenv run python -m pycodestyle"
 alias pytest="pipenv run python -W ignore -m pytest"
 
