@@ -9,7 +9,8 @@
     # Global Git Ignore
     excludesfile = /Users/mefryar/.gitignore
 [push]
-    default = upstream
+    # Refuse if the upstream branch’s name is different from the local one
+	default = simple
 [merge]
     # Display common ancestor when resolving merge conflicts
     conflictstyle = diff3
