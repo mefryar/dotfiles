@@ -75,8 +75,11 @@ alias pytest="pipenv run python -W ignore -m pytest"
 # If on Juntos laptop
 if [ `whoami` = "michael" ]
 then
-  # Automatically initialize pyenv
+  # Automatically initialize pyenv and pyenv-virtualenv
   eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+  # Enable prompt
+  export PYENV_VIRTUALENV_DISABLE_PROMPT=1
   # Add Pensieve and Mercury credentials from untracked file
   source ~/.pensieve_mercury_credentials.txt
 # If on personal laptop
