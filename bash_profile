@@ -36,7 +36,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
 
 # Do not show duplicates (&) or the following commands in history
-export HISTIGNORE="&:exit:history*:ls*:"
+export HISTIGNORE="&:exit:history*:"
 
 # Add timestamp to history
 export HISTTIMEFORMAT="%Y-%m-%d %T "
