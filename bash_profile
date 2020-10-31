@@ -67,6 +67,9 @@ alias sandbox="cd ~/Box\ Sync/jupyter_sandbox"
 alias styletest="pipenv run python -m pycodestyle"
 alias pytest="pipenv run python -W ignore -m pytest"
 
+# Automatically initialize rbenv
+eval "$(rbenv init -)"
+
 # Automatically initialize pyenv and pyenv-virtualenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
