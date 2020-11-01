@@ -1,0 +1,6 @@
+# Alias for sublime-text-settings repo
+alias st3-settings="cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
+
+# Aliases for DI Pipeline tests
+alias styletest="pipenv run python -m pycodestyle"
+alias pytest="pipenv run python -W ignore -m pytest"

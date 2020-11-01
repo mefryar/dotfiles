@@ -20,12 +20,3 @@
 [credential]
     # Save username, password, and personal access tokens
     helper = osxkeychain
-[alias]
-    ba = branch -a
-    bdd = branch -D
-    #############
-    ca = commit -a
-    #############
-    d = diff
-    #############
-    rpo = remote prune origin
