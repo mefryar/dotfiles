@@ -27,9 +27,6 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Automatically initialize rbenv
-eval "$(rbenv init -)"
-
 # Automatically initialize pyenv and pyenv-virtualenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
@@ -40,6 +37,9 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 # If on Juntos laptop
 if [ `whoami` = "michael" ]
 then
+  # Automatically initialize rbenv
+  eval "$(rbenv init -)"
+
   # Add Pensieve and Mercury credentials from untracked file
   source ~/.pensieve_mercury_credentials.txt
 fi
