@@ -39,7 +39,4 @@ if [ `whoami` = "michael" ]
 then
   # Automatically initialize rbenv
   eval "$(rbenv init -)"
-
-  # Add Pensieve and Mercury credentials from untracked file
-  source ~/.pensieve_mercury_credentials.txt
 fi

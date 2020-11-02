@@ -1,5 +1,5 @@
 # dotfiles
-Contains custom dotfiles. Right now these are just for configuring bash and
+Contains custom dotfiles. Right now these are just for configuring zsh and
 git. This repo is cloned to the home directory so the path is `~/dotfiles/`.
 The script `makesymlinks.sh` creates symbolic links from the home directory to
 `~/dotfiles/`.
