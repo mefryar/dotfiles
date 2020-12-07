@@ -18,14 +18,16 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Load plugins
 plugins=(
   git
-  heroku
   rails
-  sublime
+  vi-mode
 )
 source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Add zsh-syntax-highlighting installed via Homebrew
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Automatically initialize pyenv and pyenv-virtualenv
 eval "$(pyenv init -)"
