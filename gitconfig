@@ -5,7 +5,7 @@
 
 [core]
     # Set default editor to Sublime Text
-    editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
+    editor = vim
     # Global Git Ignore
     excludesfile = /Users/mefryar/.gitignore
 [push]
