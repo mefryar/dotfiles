@@ -1,0 +1,7 @@
+# This file controls the behaviour of line input editing for
+# programs that use the GNU Readline library. For zsh users,
+# it is still necessary in order to enable vi mode for 
+# IRB (Interactive Ruby) and the Python Interactive Shell. 
+#
+set editing-mode vi 
+set show-mode-in-prompt on
