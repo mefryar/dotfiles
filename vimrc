@@ -24,6 +24,9 @@ syntax on
 set background=dark
 colorscheme solarized
 
+" Display line numbers on the left
+set number
+
 " AUTOCOMMANDS
 " Put these in an autocmd group, so that we can delete them easily.
 augroup vimrc
