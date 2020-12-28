@@ -36,3 +36,12 @@ augroup vimrc
   autocmd FileType gitcommit setlocal textwidth=72
 augroup END
 
+" PACKAGES
+" The matchit plugin makes the % command work better by supporting
+" cycling between if, else if, else, endif keywords in various programming
+" languages. It is not backwards compatible.
+" The ! means the package won't be loaded right away but when plugins are
+" loaded during initialization.
+if has('syntax') && has('eval')
+  packadd! matchit
+endif
