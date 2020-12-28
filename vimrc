@@ -1,18 +1,14 @@
 " Maintainer: Michael Fryar <michaelefryar@gmail.com>
-" Last change:	2020 Dec 07
 "
-" Sources: 
+" Sources:
 "   - vimrc_example.rc
 "   - https://vim.fandom.com/wiki/Example_vimrc
 
-" Get the defaults that most users want.
+" Get the defaults that most users want. This includes `set nocompatible`,
+" which loads Vim settings rather than Vi settings.
 source $VIMRUNTIME/defaults.vim
 
 " FEATURES
-
-" Set 'nocompatible' to ward off unexpected things that your distro might
-" have made, as well as sanely reset options when re-sourcing .vimrc
-set nocompatible
 
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
