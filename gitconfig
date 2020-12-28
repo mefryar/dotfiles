@@ -4,8 +4,8 @@
 # Hat tip: How to Use Git and GitHub - Udacity (ud775)
 
 [core]
-    # Set default editor to Sublime Text
-    editor = vim
+    # Set default editor to vim and start in insert mode
+    editor = vim +start
     # Global Git Ignore
     excludesfile = /Users/mefryar/.gitignore
 [push]
