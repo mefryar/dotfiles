@@ -11,8 +11,13 @@ dir=~/dotfiles
 files="gitconfig inputrc vimrc zshrc"
 # Create symlinks from the homedir to files in the ~/dotfiles directory
 for file in $files; do
-    echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
+	# Check if file already exists
+	if [ ! -f ~/.$file ]; then
+		echo "Creating symlink to ~/.$file"
+		ln -s $dir/$file ~/.$file
+	else
+		echo "~/.$file already exists"
+	fi
 done
 
 # Custom symlink for aliases
