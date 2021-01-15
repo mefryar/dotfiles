@@ -19,7 +19,3 @@ for file in $files; do
 		echo "~/.$file already exists"
 	fi
 done
-
-# Custom symlink for aliases
-echo "Creating symlink to .oh-my-zsh/custom/aliases.zsh in home directory."
-ln -s ~/dotfiles/aliases ~/.oh-my-zsh/custom/aliases.zsh
