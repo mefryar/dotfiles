@@ -33,9 +33,6 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# Enable prompt
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-
 # If on Juntos laptop
 if [ `whoami` = "michael" ]
 then
