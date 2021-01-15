@@ -1,15 +1,30 @@
 " Maintainer: Michael Fryar <michaelefryar@gmail.com>
 "
-" Sources:
-"   - vimrc_example.rc
-"   - https://vim.fandom.com/wiki/Example_vimrc
-
-" Get the defaults that most users want. This includes `set nocompatible`,
+" Load Vim 8 defaults. This includes `set nocompatible`,
 " which loads Vim settings rather than Vi settings.
+unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
 
-" FEATURES
+" PLUGINS
+" Specify a directory for plugins
+call plug#begin('~/.vim/plugged')
 
+" Asynchronous Lint Engine
+Plug 'dense-analysis/ale'
+
+" Initialize plugin system
+call plug#end()
+
+" Set specific linters
+let g:ale_linters = {'ruby': ['rubocop']}
+
+" Only run linters named in ale_linters settings.
+let g:ale_linters_explicit = 1
+
+" Don't lint when opening a file
+let g:ale_lint_on_enter = 0
+
+" FEATURES
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
