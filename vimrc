@@ -16,7 +16,11 @@ Plug 'dense-analysis/ale'
 call plug#end()
 
 " Set specific linters
-let g:ale_linters = {'ruby': ['rubocop']}
+let g:ale_linters = {
+\  'ruby': ['rubocop'],
+\  'python': ['flake8'],
+\  'javascript': ['eslint']
+\}
 
 " Only run linters named in ale_linters settings.
 let g:ale_linters_explicit = 1
