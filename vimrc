@@ -19,7 +19,8 @@ call plug#end()
 let g:ale_linters = {
 \  'ruby': ['rubocop'],
 \  'python': ['flake8'],
-\  'javascript': ['eslint']
+\  'javascript': ['eslint'],
+\  'haml': ['hamllint']
 \}
 
 " Only run linters named in ale_linters settings.
