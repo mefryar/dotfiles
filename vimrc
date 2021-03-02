@@ -49,10 +49,28 @@ set number
 " AUTOCOMMANDS
 " Put these in an autocmd group, so that we can delete them easily.
 augroup vimrc
-  au!
+  autocmd!
 
-  " For all gitcommit files, wrap text at 72 characters.
-  autocmd FileType gitcommit setlocal textwidth=72
+  function MarkdownSettings()
+    " Wrap text at 80 characters
+    setlocal textwidth=80
+
+    " Check spelling
+    setlocal spell
+  endfunction
+  
+  function GitCommitSettings()
+    " Always start on first line
+    call setpos('.', [0, 1, 1, 0])
+
+    " Wrap text at 72 characters
+    setlocal textwidth=72
+
+    " Check spelling
+    setlocal spell
+  endfunction
+  autocmd FileType markdown call MarkdownSettings()
+  autocmd FileType gitcommit call GitCommitSettings()
 augroup END
 
 " PACKAGES
