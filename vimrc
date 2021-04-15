@@ -12,6 +12,9 @@ call plug#begin('~/.vim/plugged')
 " Asynchronous Lint Engine
 Plug 'dense-analysis/ale'
 
+" Mappings for copying / pasting text to the system clipboard
+Plug 'christoomey/vim-system-copy'
+
 " Initialize plugin system
 call plug#end()
 
