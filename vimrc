@@ -21,7 +21,7 @@ call plug#end()
 " Set specific linters
 let g:ale_linters = {
 \  'ruby': ['rubocop'],
-\  'python': ['flake8'],
+\  'python': ['flake8', 'pycodestyle'],
 \  'javascript': ['eslint'],
 \  'haml': ['hamllint']
 \}
