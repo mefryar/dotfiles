@@ -8,6 +8,8 @@
     editor = vim +start
     # Global Git Ignore
     excludesfile = /Users/mefryar/.gitignore
+    # Ensure line endings in files are correct for macOS
+    autocrlf = input
 [push]
     # Refuse if the upstream branch’s name is different from the local one
 	default = simple
