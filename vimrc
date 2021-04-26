@@ -50,6 +50,14 @@ colorscheme solarized
 " Display line numbers on the left
 set number
 
+" MAPPINGS
+" Notes:
+"   - nnoremap indicates a normal mode non-recursive mapping
+"   - The default <leader> key is \
+
+" Copy current relative file path (src/foo.txt) to system clipboard
+nnoremap <leader>cf :let @*=expand("%")<CR>
+
 " AUTOCOMMANDS
 " Put these in an autocmd group, so that we can delete them easily.
 augroup vimrc
