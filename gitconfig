@@ -22,3 +22,9 @@
 [credential]
     # Save username, password, and personal access tokens
     helper = osxkeychain
+[pull]
+    # In its default mode, git pull is shorthand for git fetch followed by git
+    # merge FETCH_HEAD. With --ff-only, resolve the merge as a fast-forward
+    # when possible. When not possible, refuse to merge and exit with a
+    # non-zero status.
+	ff = only
