@@ -47,6 +47,10 @@ syntax on
 set background=dark
 colorscheme solarized
 
+" Enable italics
+set t_ZH=[3m
+set t_ZR=[23m
+
 " Display line numbers on the left
 set number
 
