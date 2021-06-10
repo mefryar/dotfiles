@@ -20,10 +20,11 @@ call plug#end()
 
 " Set specific linters
 let g:ale_linters = {
-\  'ruby': ['rubocop'],
-\  'python': ['flake8', 'pycodestyle'],
+\  'clojure': ['clj-kondo'],
+\  'haml': ['hamllint'],
 \  'javascript': ['eslint'],
-\  'haml': ['hamllint']
+\  'python': ['flake8', 'pycodestyle'],
+\  'ruby': ['rubocop']
 \}
 
 " Only run linters named in ale_linters settings.
