@@ -38,6 +38,10 @@ let g:ale_lint_on_enter = 0
 " and for plugins that are filetype specific.
 filetype indent plugin on
 
+" Copy indent from the current line when starting a new line.
+" This is particularly helpful when writing lists in a git commit message.
+set autoindent
+
 " Enable syntax highlighting
 syntax on
 
