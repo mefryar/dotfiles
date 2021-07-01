@@ -15,6 +15,9 @@ Plug 'dense-analysis/ale'
 " Mappings for copying / pasting text to the system clipboard
 Plug 'christoomey/vim-system-copy'
 
+" Enable REPL-driven development in Clojure
+Plug 'tpope/vim-fireplace'
+
 " Initialize plugin system
 call plug#end()
 
