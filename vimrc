@@ -12,9 +12,6 @@ call plug#begin('~/.vim/plugged')
 " Asynchronous Lint Engine
 Plug 'dense-analysis/ale'
 
-" Mappings for copying / pasting text to the system clipboard
-Plug 'christoomey/vim-system-copy'
-
 " Enable REPL-driven development in Clojure
 Plug 'tpope/vim-fireplace'
 
@@ -69,6 +66,12 @@ set number
 
 " Copy current relative file path (src/foo.txt) to system clipboard
 nnoremap <leader>cf :let @*=expand("%")<CR>
+
+" Copy (yank) to system clipboard
+noremap <Leader>y "*y
+
+" Paste from system clipboard
+noremap <Leader>p "*p
 
 " AUTOCOMMANDS
 " Put these in an autocmd group, so that we can delete them easily.
