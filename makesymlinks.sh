@@ -8,7 +8,7 @@
 ## Dotfiles directory
 dir=~/dotfiles
 ## Files to symlink in homedir
-files="gitconfig inputrc p10k.zsh vimrc zshrc"
+files="gitconfig inputrc lein/profiles.clj p10k.zsh vimrc zshrc"
 # Create symlinks from the homedir to files in the ~/dotfiles directory
 for file in $files; do
 	# Check if file already exists
