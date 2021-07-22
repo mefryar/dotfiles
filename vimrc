@@ -12,6 +12,9 @@ call plug#begin('~/.vim/plugged')
 " Asynchronous Lint Engine
 Plug 'dense-analysis/ale'
 
+" Clojure syntax highlighting
+Plug 'jrdoane/vim-clojure-highlight'
+
 " Enable REPL-driven development in Clojure
 Plug 'tpope/vim-fireplace'
 
