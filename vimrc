@@ -12,6 +12,9 @@ call plug#begin('~/.vim/plugged')
 " Asynchronous Lint Engine
 Plug 'dense-analysis/ale'
 
+" Rainbow parentheses
+Plug 'luochen1990/rainbow'
+
 " Clojure syntax highlighting
 Plug 'jrdoane/vim-clojure-highlight'
 
@@ -35,6 +38,13 @@ let g:ale_linters_explicit = 1
 
 " Don't lint when opening a file
 let g:ale_lint_on_enter = 0
+
+" Activate rainbow parentheses
+let g:rainbow_active = 1
+
+let g:rainbow_conf = {
+\	'ctermfgs': ['darkred', 'darkyellow', 'darkgreen', 'darkblue', 'darkmagenta'],
+\}
 
 " FEATURES
 " Attempt to determine the type of a file based on its name and possibly its
