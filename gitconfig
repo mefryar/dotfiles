@@ -28,3 +28,6 @@
     # when possible. When not possible, refuse to merge and exit with a
     # non-zero status.
 	ff = only
+[init]
+    # When creating a repo with `git init`, set initial branch to `main`
+	defaultBranch = main
