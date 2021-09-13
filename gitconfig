@@ -19,6 +19,7 @@
 [user]
     name = mefryar
     email = michaelefryar@gmail.com
+    signingkey = 276487A3DBB94CD6
 [credential]
     # Save username, password, and personal access tokens
     helper = osxkeychain
@@ -31,3 +32,6 @@
 [init]
     # When creating a repo with `git init`, set initial branch to `main`
 	defaultBranch = main
+[commit]
+    # Use GPG to sign commits so that they will be marked as verified on GitHub
+	gpgsign = true
