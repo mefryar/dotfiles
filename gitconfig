@@ -35,3 +35,8 @@
         name = mefryar
         email = michaelefryar@gmail.com
         signingkey = 276487A3DBB94CD6
+
+# Load Nubank specific config when in Nubank repositories
+# This must be at the bottom in order to overwrite values defined above
+[includeIf "gitdir:~/dev/nu/"]
+        path = ~/.gitconfig-nu

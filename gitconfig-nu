@@ -1,0 +1,16 @@
+# ====================================================================== #
+# Description: Nubank specific git configurations
+
+# Configure Git Large File Storage extension
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge --skip %f
+	process = git-lfs filter-process --skip
+	required = True
+# Force use of SSH instead of HTTPS
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[user]
+        name = Michael Fryar
+        email = michael.fryar@nubank.com.br
+        signingkey = 1B4D4D3B068AB7D9

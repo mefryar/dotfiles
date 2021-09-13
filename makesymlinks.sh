@@ -9,6 +9,11 @@
 dir=~/dotfiles
 ## Files to symlink in homedir
 files="gitconfig inputrc lein/profiles.clj p10k.zsh vimrc zshrc"
+# If on Nubank laptop...
+if [ `whoami` = "michael.fryar" ]
+then
+	files="$files gitconfig-nu"
+fi
 # Create symlinks from the homedir to files in the ~/dotfiles directory
 for file in $files; do
 	# Check if file already exists
