@@ -3,35 +3,35 @@
 # Author: Michael Fryar
 # Hat tip: How to Use Git and GitHub - Udacity (ud775)
 
-[core]
-    # Set default editor to vim and start in insert mode
-    editor = vim +start
-    # Global Git Ignore
-    excludesfile = /Users/mefryar/.gitignore
-    # Ensure line endings in files are correct for macOS
-    autocrlf = input
-[push]
-    # Refuse if the upstream branch’s name is different from the local one
-	default = simple
-[merge]
-    # Display common ancestor when resolving merge conflicts
-    conflictstyle = diff3
-[user]
-    name = mefryar
-    email = michaelefryar@gmail.com
-    signingkey = 276487A3DBB94CD6
-[credential]
-    # Save username, password, and personal access tokens
-    helper = osxkeychain
-[pull]
-    # In its default mode, git pull is shorthand for git fetch followed by git
-    # merge FETCH_HEAD. With --ff-only, resolve the merge as a fast-forward
-    # when possible. When not possible, refuse to merge and exit with a
-    # non-zero status.
-	ff = only
-[init]
-    # When creating a repo with `git init`, set initial branch to `main`
-	defaultBranch = main
 [commit]
-    # Use GPG to sign commits so that they will be marked as verified on GitHub
+        # Use GPG to sign commits so that they will be marked as verified on GitHub
 	gpgsign = true
+[core]
+	# Set default editor to vim and start in insert mode
+	editor = vim +start
+	# Global Git Ignore
+	excludesfile = ~/.gitignore
+	# Ensure line endings in files are correct for macOS
+	autocrlf = input
+[credential]
+        # Save username, password, and personal access tokens
+        helper = osxkeychain
+[init]
+        # When creating a repo with `git init`, set initial branch to `main`
+	defaultBranch = main
+[merge]
+        # Display common ancestor when resolving merge conflicts
+        conflictstyle = diff3
+[pull]
+        # In its default mode, git pull is shorthand for git fetch followed by git
+        # merge FETCH_HEAD. With --ff-only, resolve the merge as a fast-forward
+        # when possible. When not possible, refuse to merge and exit with a
+        # non-zero status.
+	ff = only
+[push]
+	# Refuse if the upstream branch’s name is different from the local one
+	default = simple
+[user]
+        name = mefryar
+        email = michaelefryar@gmail.com
+        signingkey = 276487A3DBB94CD6
