@@ -61,6 +61,12 @@ syntax on
 
 " OPTIONS
 
+" Ensure spell check errors are underlined in red
+augroup SpellUnderlineRed
+  autocmd!
+  autocmd ColorScheme * highlight SpellBad cterm=underline ctermfg=red
+augroup END
+
 " Set colorscheme
 set background=dark
 colorscheme solarized
