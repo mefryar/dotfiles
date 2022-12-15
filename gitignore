@@ -9,3 +9,6 @@ logs/
 
 # Temporary files
 *.swp
+
+# Folder for files to ignore
+ignore/
