@@ -3,6 +3,9 @@
 # Author: Michael Fryar
 # Hat tip: How to Use Git and GitHub - Udacity (ud775)
 
+[alias]
+	# Delete all local branches that are already merged into the currently checked out branch
+        cleanup = "!git branch --merged | grep  -v '\\*\\|main\\|master' | xargs -n 1 -r git branch -d"
 [commit]
         # Use GPG to sign commits so that they will be marked as verified on GitHub
 	gpgsign = true
