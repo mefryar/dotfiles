@@ -18,6 +18,9 @@ Plug 'luochen1990/rainbow'
 " Clojure syntax highlighting
 Plug 'jrdoane/vim-clojure-highlight'
 
+" Vim as a merge tool
+Plug 'samoshkin/vim-mergetool'
+
 " Enable REPL-driven development in Clojure
 Plug 'tpope/vim-fireplace'
 
@@ -45,6 +48,12 @@ let g:rainbow_active = 1
 let g:rainbow_conf = {
 \	'ctermfgs': ['darkred', 'darkyellow', 'darkgreen', 'darkblue', 'darkmagenta'],
 \}
+
+" (b) - for base revision
+" (m) - for working tree version of MERGED file
+" (r) - for 'remote' revision 
+let g:mergetool_layout = 'bmr'
+let g:mergetool_prefer_revision = 'unmodified'
 
 " FEATURES
 " Attempt to determine the type of a file based on its name and possibly its
