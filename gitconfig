@@ -37,7 +37,7 @@
 [user]
         name = mefryar
         email = michaelefryar@gmail.com
-        signingkey = 7BE75C39A96EDE09
+        signingkey = 6D472F6B447148C3
 
 # Load Nubank specific config when in Nubank repositories
 # This must be at the bottom in order to overwrite values defined above
