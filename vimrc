@@ -80,6 +80,9 @@ augroup END
 set background=dark
 colorscheme solarized
 
+" Set autocomplete to include hyphens
+set iskeyword+=\-
+
 " Enable italics
 set t_ZH=[3m
 set t_ZR=[23m
