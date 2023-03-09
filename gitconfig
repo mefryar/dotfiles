@@ -39,6 +39,15 @@
         email = michaelefryar@gmail.com
         signingkey = 6D472F6B447148C3
 
+# Force use of SSH instead of HTTPS
+[url "git@github.com:"]
+	insteadOf = git://github.com/
+
+# Configure Git Large File Storage extension
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+
 # Load Nubank specific config when in Nubank repositories
 # This must be at the bottom in order to overwrite values defined above
 [includeIf "gitdir:~/dev/nu/"]
