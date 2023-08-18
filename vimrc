@@ -16,7 +16,8 @@ Plug 'dense-analysis/ale'
 Plug 'jrdoane/vim-clojure-highlight'
 
 " Fuzzy finder
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Rainbow parentheses
 Plug 'luochen1990/rainbow'
