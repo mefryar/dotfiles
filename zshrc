@@ -42,3 +42,6 @@ eval "$(pyenv virtualenv-init -)"
 
 # Automatically initialize rbenv
 eval "$(rbenv init -)"
+
+# Initialize fuzzy finding via fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

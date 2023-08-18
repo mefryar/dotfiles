@@ -12,11 +12,14 @@ call plug#begin('~/.vim/plugged')
 " Asynchronous Lint Engine
 Plug 'dense-analysis/ale'
 
-" Rainbow parentheses
-Plug 'luochen1990/rainbow'
-
 " Clojure syntax highlighting
 Plug 'jrdoane/vim-clojure-highlight'
+
+" Fuzzy finder
+Plug 'junegunn/fzf'
+
+" Rainbow parentheses
+Plug 'luochen1990/rainbow'
 
 " Vim as a merge tool
 Plug 'samoshkin/vim-mergetool'
