@@ -19,6 +19,10 @@
 [credential]
         # Save username, password, and personal access tokens
         helper = osxkeychain
+[fetch]
+        # Delete local remote tracking branches when the branch on the remote machine has been deleted
+        # Note: Applies to `git pull` as well
+        prune = true
 [init]
         # When creating a repo with `git init`, set initial branch to `main`
 	defaultBranch = main
