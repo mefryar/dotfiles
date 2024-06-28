@@ -25,7 +25,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Load plugins
 plugins=(
   git
-  rails
   vi-mode
 )
 source $ZSH/oh-my-zsh.sh
@@ -35,13 +34,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Add zsh-syntax-highlighting installed via Homebrew
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Automatically initialize pyenv and pyenv-virtualenv
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
-
-# Automatically initialize rbenv
-eval "$(rbenv init -)"
 
 # Initialize fuzzy finding via fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
