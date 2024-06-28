@@ -80,7 +80,8 @@ augroup SpellUnderlineRed
   autocmd ColorScheme * highlight SpellBad cterm=underline ctermfg=red
 augroup END
 
-" Set colorscheme
+" Set colorscheme (Use ericbn/vim-solarized)
+" (Reminder: iTerm2 -> Settings -> Profiles -> Colors -> Color Presets -> Solarized)
 set background=dark
 colorscheme solarized
 
