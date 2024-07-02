@@ -33,7 +33,7 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Add zsh-syntax-highlighting installed via Homebrew
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Initialize fuzzy finding via fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
