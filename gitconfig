@@ -6,6 +6,13 @@
 [alias]
 	# Delete all local branches that are already merged into the currently checked out branch
         cleanup = "!git branch --merged | grep  -v '\\*\\|main\\|master' | xargs -n 1 -r git branch -d"
+
+	# Show local branches whose remote tracking branch is gone
+	branch-remote-gone = "!git branch -vv | grep ': gone]' | awk '{print $1}'"
+
+	# Delete local branches whose remote tracking branch is gone
+	branch-delete-remote-gone = "!git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D"
+
 [commit]
         # Use GPG to sign commits so that they will be marked as verified on GitHub
 	gpgsign = true
