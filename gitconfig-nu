@@ -1,7 +1,0 @@
-# ====================================================================== #
-# Description: Nubank specific git configurations
-
-[user]
-        name = Michael Fryar
-        email = michael.fryar@nubank.com.br
-        signingkey = 25CDDD03575127ED
