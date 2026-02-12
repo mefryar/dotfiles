@@ -37,3 +37,6 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # Initialize fuzzy finding via fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# GPG Configuration - Fix for "Inappropriate ioctl for device" error
+export GPG_TTY=$(tty)
