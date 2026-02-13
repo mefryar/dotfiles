@@ -52,7 +52,7 @@ claude-worktree() {
   local branch=$(git branch --show-current)
   local default_branch=$(git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@^refs/remotes/origin/@@')
   default_branch="${default_branch:-main}"
-  local wt_dir="${repo_root}/../${repo_name}-wt/${branch}"
+  local wt_dir="$NU_HOME/worktrees/${repo_name}/${branch}"
 
   if [ "$branch" = "$default_branch" ]; then
     echo "You're on $branch. Switch to a feature branch first."
@@ -60,6 +60,7 @@ claude-worktree() {
   fi
 
   if [ ! -d "$wt_dir" ]; then
+    mkdir -p "$(dirname "$wt_dir")"
     git checkout "$default_branch"
     git worktree add "$wt_dir" "$branch"
   fi
@@ -72,7 +73,7 @@ alias cw=claude-worktree
 remove-worktrees() {
   local repo_root=$(git rev-parse --show-toplevel)
   local repo_name=$(basename "$repo_root")
-  local wt_base="${repo_root}/../${repo_name}-wt"
+  local wt_base="$NU_HOME/worktrees/${repo_name}"
 
   if [ ! -d "$wt_base" ]; then
     echo "No worktree directory found at $wt_base"
