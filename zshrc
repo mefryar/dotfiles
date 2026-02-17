@@ -21,6 +21,10 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # GPG Configuration - Fix for "Inappropriate ioctl for device" error
 export GPG_TTY=$(tty)
 
+# ls aliases
+alias ls='ls -1G' # Single column with color
+alias lsa='ls -1GA' # Single column with color, including hidden files
+
 # =========================================================================== #
 # Git Aliases (formerly from oh-my-zsh git plugin)
 # =========================================================================== #
