@@ -50,6 +50,7 @@ alias gbd='git branch --delete'
 
 # Commit
 alias gc='git commit --verbose'
+alias gca='git commit --verbose --all'
 
 # Diff
 alias gd='git diff'
