@@ -148,3 +148,6 @@ remove-worktrees() {
 
 # Initialize Starship prompt
 eval "$(starship init zsh)"
+
+# Initialize zoxide: A smarter cd command
+eval "$(zoxide init zsh)"
