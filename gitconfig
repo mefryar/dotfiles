@@ -48,7 +48,10 @@
 [user]
         name = mefryar
         email = michaelefryar@gmail.com
-        signingkey = 6D472F6B447148C3
+
+# Load machine-specific config (e.g., signingkey)
+[include]
+        path = ~/.gitconfig-local
 
 # Force use of SSH instead of HTTPS
 [url "git@github.com:"]
