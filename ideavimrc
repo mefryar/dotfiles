@@ -1,2 +1,5 @@
 " See: https://stackoverflow.com/a/68455270/6732127
 nmap <C-o> :action Back<CR>
+
+""" Plugins  --------------------------------
+Plug 'tpope/vim-surround'
