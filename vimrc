@@ -80,10 +80,7 @@ augroup SpellUnderlineRed
   autocmd ColorScheme * highlight SpellBad cterm=underline ctermfg=red
 augroup END
 
-" Set colorscheme (Use ericbn/vim-solarized)
-" (Reminder: iTerm2 -> Settings -> Profiles -> Colors -> Color Presets -> Solarized)
 set background=dark
-colorscheme solarized
 
 " Set autocomplete to include hyphens
 set iskeyword+=\-
