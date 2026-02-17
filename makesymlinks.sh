@@ -8,7 +8,7 @@
 ## Dotfiles directory
 dir=~/dotfiles
 ## Files to symlink in homedir
-files="gitconfig ideavimrc inputrc lein/profiles.clj p10k.zsh vimrc zshrc"
+files="gitconfig gitignore ideavimrc inputrc lein/profiles.clj vimrc zshrc"
 # If on Nubank laptop...
 if [ `whoami` = "michael.fryar" ]
 then

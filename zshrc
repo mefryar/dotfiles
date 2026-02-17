@@ -2,13 +2,6 @@
 # Description: ZSH configurations and aliases
 # Author: Michael Fryar
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # If on Nubank laptop...
 if [ `whoami` = "michael.fryar" ]
 then
@@ -16,21 +9,8 @@ then
   source ~/.zshrc.nubank
 fi
 
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-
-# Use powerlevel10k theme
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# Load plugins
-plugins=(
-  git
-  vi-mode
-)
-source $ZSH/oh-my-zsh.sh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Vi mode
+bindkey -v
 
 # Add zsh-syntax-highlighting installed via Homebrew
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -40,6 +20,69 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # GPG Configuration - Fix for "Inappropriate ioctl for device" error
 export GPG_TTY=$(tty)
+
+# =========================================================================== #
+# Git Aliases (formerly from oh-my-zsh git plugin)
+# =========================================================================== #
+
+# Helpers used by some aliases
+git_current_branch() { git rev-parse --abbrev-ref HEAD }
+git_main_branch() {
+  local ref
+  for ref in refs/heads/main refs/heads/master refs/remotes/origin/main refs/remotes/origin/master; do
+    if git show-ref -q --verify "$ref"; then
+      echo "${ref##*/}"
+      return 0
+    fi
+  done
+  echo main
+}
+
+# Add
+alias ga='git add'
+alias gaa='git add --all'
+alias gapa='git add --patch'
+
+# Branch
+alias gb='git branch'
+alias gba='git branch --all'
+alias gbd='git branch --delete'
+
+# Commit
+alias gc='git commit --verbose'
+
+# Diff
+alias gd='git diff'
+alias gds='git diff --staged'
+
+# Pull / Push
+alias gl='git pull'
+alias gp='git push'
+alias gpsup='git push --set-upstream origin $(git_current_branch)'
+
+# Log
+alias glg='git log --stat'
+alias glog='git log --oneline --decorate --graph'
+
+# Rebase
+alias grbi='git rebase --interactive'
+
+# Restore
+alias grs='git restore'
+alias grst='git restore --staged'
+
+# Stash
+alias gsta='git stash push'
+alias gstp='git stash pop'
+
+# Status
+alias gst='git status'
+alias gss='git status --short'
+
+# Switch
+alias gsw='git switch'
+alias gswc='git switch --create'
+alias gswm='git switch $(git_main_branch)'
 
 # =========================================================================== #
 # Git Worktree + Claude Code
@@ -102,3 +145,6 @@ remove-worktrees() {
   rmdir "$wt_base" 2>/dev/null
   echo "Done."
 }
+
+# Initialize Starship prompt
+eval "$(starship init zsh)"
