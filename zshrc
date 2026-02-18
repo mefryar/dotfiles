@@ -25,6 +25,9 @@ export GPG_TTY=$(tty)
 alias ls='ls -1G' # Single column with color
 alias lsa='ls -1GA' # Single column with color, including hidden files
 
+# Git tab-completion
+autoload -Uz compinit && compinit
+
 # =========================================================================== #
 # Git Aliases (formerly from oh-my-zsh git plugin)
 # =========================================================================== #
