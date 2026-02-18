@@ -66,3 +66,7 @@
 # This must be at the bottom in order to overwrite values defined above
 [includeIf "gitdir:~/dev/nu/"]
         path = ~/.gitconfig-nu
+[color]
+	diff = auto
+	status = auto
+	branch = auto
