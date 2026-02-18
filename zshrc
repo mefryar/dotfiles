@@ -54,6 +54,7 @@ alias gapa='git add --patch'
 alias gb='git branch'
 alias gba='git branch --all'
 alias gbd='git branch --delete'
+alias gbD='git branch -D'
 
 # Commit
 alias gc='git commit --verbose'
@@ -91,6 +92,9 @@ alias gss='git status --short'
 alias gsw='git switch'
 alias gswc='git switch --create'
 alias gswm='git switch $(git_main_branch)'
+
+# Worktree
+alias gwtrm='git worktree remove'
 
 # =========================================================================== #
 # Git Worktree + Claude Code
