@@ -158,6 +158,9 @@ remove-worktrees() {
   echo "Done."
 }
 
+# Enable Claude Code automemory
+CLAUDE_CODE_DISABLE_AUTO_MEMORY=0
+
 # Initialize Starship prompt
 eval "$(starship init zsh)"
 
